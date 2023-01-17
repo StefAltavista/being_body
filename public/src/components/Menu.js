@@ -3,51 +3,22 @@ import { Link } from "react-scroll";
 
 export default function Menu({ toggleMenu, toggle }) {
     return (
-        <div id="list" style={{ height: toggleMenu }}>
-            <Link to="practice" spy={true} smooth={true} offset={-120}>
-                <p
-                    onClick={() =>
-                        toggle(toggleMenu == "0px" ? "200px" : "0px")
-                    }
-                >
-                    Practice
-                </p>
+        <div id="menu" style={{ width: toggleMenu }}>
+            <Link to="practice" spy={true} smooth={true} offset={-125}>
+                <p onClick={() => toggle("0px")}>Practice</p>
             </Link>
-            <Link to="katiaserena" spy={true} smooth={true} offset={-120}>
-                <p
-                    onClick={() =>
-                        toggle(toggleMenu == "0px" ? "200px" : "0px")
-                    }
-                >
-                    Katia Serena
-                </p>
+
+            <Link to="massage" spy={true} smooth={true} offset={-125}>
+                <p onClick={() => toggle("0px")}>Massage Therapies</p>
             </Link>
-            <Link to="massage" spy={true} smooth={true} offset={-120}>
-                <p
-                    onClick={() =>
-                        toggle(toggleMenu == "0px" ? "200px" : "0px")
-                    }
-                >
-                    Massage Therapies
-                </p>
+            <Link to="prices" spy={true} smooth={true} offset={-125}>
+                <p onClick={() => toggle("0px")}>Prices</p>
             </Link>
-            <Link to="prices" spy={true} smooth={true} offset={-120}>
-                <p
-                    onClick={() =>
-                        toggle(toggleMenu == "0px" ? "200px" : "0px")
-                    }
-                >
-                    Prices
-                </p>
+            <Link to="katiaserena" spy={true} smooth={true} offset={-125}>
+                <p onClick={() => toggle("0px")}>About Katia Serena</p>
             </Link>
-            <Link to="contacts" spy={true} smooth={true} offset={-120}>
-                <p
-                    onClick={() =>
-                        toggle(toggleMenu == "0px" ? "200px" : "0px")
-                    }
-                >
-                    Contacts
-                </p>
+            <Link to="contacts" spy={true} smooth={true} offset={-125}>
+                <p onClick={() => toggle("0px")}>Contacts</p>
             </Link>
         </div>
     );
