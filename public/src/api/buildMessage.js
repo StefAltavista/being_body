@@ -6,6 +6,6 @@ export default function buildMessage(data) {
         `You received a message from beingbody.net</p>` +
         `<p>Here you are the informations of: <strong>${data.name} (${data.pronouns})</strong></p>` +
         `<p>Email: ${data.email}</p><p>Phone Number: ${data.phone}</p>` +
-        `<strong>Message:</strong><p>${data.extraInfo}</p> </div> `
+        `<strong>Message:</strong><p>${data.message}</p> </div> `
     );
 }

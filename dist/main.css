@@ -4,6 +4,9 @@
     font-size: 20px;
     color: rgb(25, 15, 0);
 }
+body {
+    display: flex;
+}
 h1 {
     font-size: 40px;
     font-weight: 300;
@@ -24,28 +27,14 @@ p:hover {
     letter-spacing: 0.2px;
 }
 
-body {
-    margin: 0;
-}
 #background {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    /* background: linear-gradient(
-        22deg,
-        rgb(255, 255, 255) 0%,
-        rgb(255, 233, 181) 40%,
-        rgb(249, 255, 248) 100%
-    ); */
     overflow: scroll;
     z-index: -1;
 }
 #header {
-    /* background: linear-gradient(
-        22deg,
-        rgb(255, 233, 181) 0%,
-        rgb(255, 255, 255) 100%
-    ); */
     background-color: white;
     position: fixed;
     top: 0;
@@ -88,8 +77,7 @@ p {
 }
 
 #homeBody img {
-    margin-top: 120px;
-    width: 95vw;
+    width: 50vw;
 }
 #homeBody p {
     align-self: center;
@@ -103,6 +91,7 @@ p {
     display: flex;
     flex-direction: row;
     left: 20px;
+    top: 10px;
     cursor: pointer;
 }
 
@@ -124,10 +113,15 @@ p {
     flex-direction: row;
     transition: 500ms;
     overflow: hidden;
+    background-color: white;
 }
 
 .section {
+    width: 100%;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
     border-bottom: 1px solid black;
 }
@@ -146,5 +140,79 @@ p {
     margin: 50px;
     width: 500px;
     object-fit: contain;
+}
+
+#prices img {
+    width: 170px;
+}
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 30px;
+    bottom: 0;
+    justify-self: flex-end;
+}
+
+#footer p,
+a {
+    font-size: 15px;
+}
+@media only screen and (max-width: 1100px) {
+    #menu {
+        flex-direction: column;
+        max-width: 165px;
+        white-space: nowrap;
+    }
+    #menu p {
+        margin-top: 5px;
+    }
+    #menuArea {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #sectionBody img {
+        margin: 50px;
+        width: 200px;
+        object-fit: contain;
+    }
+
+    #sectionBody {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #titles p {
+        font-size: 15px;
+    }
+
+    #menuArea {
+        margin-top: 10px;
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        max-width: 90%;
+    }
+
+    #menuArea #label {
+        margin-bottom: 10px;
+    }
+
+    #menuArea p {
+        font-size: 15px;
+    }
+
+    #menu {
+        flex-direction: row;
+        position: static;
+        margin: 0;
+        max-width: 500px;
+    }
 }
 

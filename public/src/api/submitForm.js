@@ -1,9 +1,9 @@
-export default async function submitForm(message, cert) {
+export default async function submitForm(message) {
     return await fetch("/api/sendForm", {
-        headers: {
-            "Content-type": "application/json",
-            Authorization: cert,
-        },
+        // headers: {
+        //     "Content-type": "application/json",
+        //     Authorization: cert,
+        // },
         method: "POST",
         body: JSON.stringify({ message }),
     })

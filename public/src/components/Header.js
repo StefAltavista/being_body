@@ -14,6 +14,7 @@ export default function Header() {
 
             <div id="menuArea">
                 <p
+                    id="label"
                     onClick={() =>
                         setToggleMenu(toggleMenu == "0px" ? "350px" : "0px")
                     }
