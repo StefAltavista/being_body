@@ -10,7 +10,6 @@ export default function App() {
         <Routes>
             <Route exact path="/" element={<Home></Home>} />{" "}
             <Route path="/form" element={<Form></Form>} />{" "}
-            <Route path="/form/:cert" element={<Form></Form>} />{" "}
             <Route path="/book" element={<Book></Book>} />{" "}
             <Route path="/*" element={<Home></Home>} />{" "}
         </Routes>

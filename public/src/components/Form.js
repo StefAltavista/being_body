@@ -1,13 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
 import buildMessage from "../api/buildMessage";
 import submitForm from "../api/submitForm";
 import Footer from "./Footer";
 
 export default function Form() {
-    const { cert } = useParams();
-    console.log(cert);
     const [missingData, setMissingData] = useState(false);
     const [result, setResult] = useState();
 
@@ -20,9 +16,9 @@ export default function Form() {
         injuries: "",
         activities: "",
         discomfortAreas: "",
-        extraInfo: "",
         music: "",
         aroma: "",
+        extraInfo: "",
     });
     const inputField = (f) => {
         return f == "extraInfo" || f == "distresses" ? (
@@ -50,9 +46,9 @@ export default function Form() {
             setMissingData(true);
             return;
         }
-        const message = buildMessage(data);
-        console.log("here", message);
-        const response = await submitForm(message, cert);
+        const subject = "New Client Sheet from Beingbody.net";
+        const message = buildMessage(subject, data);
+        const response = await submitForm(subject, message);
         setResult(response);
     };
 

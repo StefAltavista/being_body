@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import Header from "./Header";
 import InputField from "./InputField";
 import buildMessage from "../api/buildMessage";
 import submitForm from "../api/submitForm";
+import { Link } from "react-router-dom";
 
 export default function Book() {
     const [result, setResult] = useState();
@@ -14,32 +16,81 @@ export default function Book() {
     });
 
     const send = async () => {
-        const message = buildMessage(data);
-        console.log(message);
-        const response = await submitForm(message);
+        const subject = "New Booking Request from Beingbody.net";
+        const message = buildMessage(subject, data);
+        const response = await submitForm(subject, message);
         setResult(response);
     };
 
     return (
         <div id="book">
-            <h3>Book an appointment</h3>
-            {!result ? (
-                <>
+            <Header></Header>
+            <div id="side">
+                <h3>Book an appointment</h3>
+                {!result && (
                     <p>Feel Free to contact me to discuss availability!</p>
-                    <p>Name:</p>
-                    <InputField f={"name"} data={data} setData={setData} />
-                    <p>Pronouns:</p>
-                    <InputField f={"pronouns"} data={data} setData={setData} />
-                    <p>Email:</p>
-                    <InputField f={"email"} data={data} setData={setData} />
-                    <p>Phone Number</p>
-                    <InputField f={"phone"} data={data} setData={setData} />
-                    <p>Message</p>
-                    <InputField f={"message"} data={data} setData={setData} />
+                )}
+            </div>
+            {!result ? (
+                <div id="input">
+                    <div id="personalInfo">
+                        <div>
+                            <p>Name:</p>
+                            <InputField
+                                f={"name"}
+                                data={data}
+                                setData={setData}
+                            />
+                        </div>
+                        <div>
+                            <p>Pronouns:</p>
+                            <InputField
+                                f={"pronouns"}
+                                data={data}
+                                setData={setData}
+                            />
+                        </div>
+                        <div>
+                            <p>Email:</p>
+                            <InputField
+                                f={"email"}
+                                data={data}
+                                setData={setData}
+                            />
+                        </div>
+                        <div>
+                            <p>Phone Number</p>
+                            <InputField
+                                f={"phone"}
+                                data={data}
+                                setData={setData}
+                            />
+                        </div>
+                    </div>
+                    <div id="message">
+                        <p>Message</p>
+                        <InputField
+                            f={"message"}
+                            data={data}
+                            setData={setData}
+                        />
+                    </div>
                     <button onClick={send}>SEND</button>
-                </>
+                    <p id="privacy">
+                        * All information is held in strictest confidence. At no
+                        given point is information disclosed or shared without
+                        client`s consent. You may choose to skip answering any
+                        question you feel impinges on personal information you
+                        do not wish to disclose.
+                    </p>
+                </div>
             ) : (
-                <p>{result}</p>
+                <>
+                    <p>{result}</p>
+                    <Link to="/">
+                        <button>Back to website</button>
+                    </Link>
+                </>
             )}
         </div>
     );

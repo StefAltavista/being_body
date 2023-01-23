@@ -16,12 +16,12 @@ const transporter = nodemailer.createTransport({
     auth: { user: EMAIL_FROM, pass: EMAIL_PASS },
 });
 
-const sendMessage = (message) => {
+const sendMessage = (subject, message) => {
     return new Promise((resolve, reject) => {
         const options = {
             from: EMAIL_FROM,
             to: EMAIL_TO,
-            subject: "MESSAGE FROM BEING BODY TEST!",
+            subject,
             html: message,
         };
 
@@ -37,7 +37,7 @@ const sendMessage = (message) => {
 
             resolve({
                 e: null,
-                result: "Message sent! Thanks for your informations - those will be kept private. See you soon! Katia",
+                result: "Message sent!",
             });
         });
     });

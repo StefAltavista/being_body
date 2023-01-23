@@ -1,11 +1,10 @@
-export default function buildMessage(data) {
-    console.log("build message with:", data);
+export default function buildMessage(subject, data) {
+    const info = Object.keys(data)
+        .map((x) => {
+            return `${x.toUpperCase()}: ${data[x]}`;
+        })
+        .toString()
+        .replace(/,/gi, "<br></br>");
 
-    return (
-        `<div><p>Hello Katia!<br></br>` +
-        `You received a message from beingbody.net</p>` +
-        `<p>Here you are the informations of: <strong>${data.name} (${data.pronouns})</strong></p>` +
-        `<p>Email: ${data.email}</p><p>Phone Number: ${data.phone}</p>` +
-        `<strong>Message:</strong><p>${data.message}</p> </div> `
-    );
+    return `<div><p>Hello Katia!<br></br>You received a ${subject}</p><br></br><p>${info}</p>`;
 }
