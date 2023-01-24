@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import buildMessage from "../api/buildMessage";
 import submitForm from "../api/submitForm";
 import Footer from "./Footer";
+import Loading from "./Loading";
 
 export default function Form() {
     const [missingData, setMissingData] = useState(false);
     const [result, setResult] = useState();
+    const [load, setLoad] = useState(false);
 
     const [data, setData] = useState({
         name: "",
@@ -48,8 +50,11 @@ export default function Form() {
         }
         const subject = `New Client Sheet: ${data.name} (${data.pronouns}) `;
         const message = buildMessage(subject, data);
+        setLoad(true);
         const response = await submitForm(subject, message);
+
         setResult(response);
+        setLoad(false);
     };
 
     return (
@@ -129,6 +134,7 @@ export default function Form() {
                     <p>{result}</p>
                 )}{" "}
             </div>
+            {load && <Loading></Loading>}
 
             <Footer></Footer>
         </div>

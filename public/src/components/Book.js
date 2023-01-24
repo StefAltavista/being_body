@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import Header from "./Header";
 import InputField from "./InputField";
 import buildMessage from "../api/buildMessage";
 import submitForm from "../api/submitForm";
-import { Link } from "react-router-dom";
+import Loading from "./Loading";
 
 export default function Book() {
     const [result, setResult] = useState();
@@ -14,12 +16,15 @@ export default function Book() {
         phone: "",
         message: "",
     });
+    const [load, setLoad] = useState(false);
 
     const send = async () => {
         const subject = "New Booking Request from Beingbody.net";
         const message = buildMessage(subject, data);
+        setLoad(true);
         const response = await submitForm(subject, message);
         setResult(response);
+        setLoad(false);
     };
 
     return (
@@ -92,6 +97,7 @@ export default function Book() {
                     </Link>
                 </>
             )}
+            {load && <Loading></Loading>}
         </div>
     );
 }
