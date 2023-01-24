@@ -46,7 +46,7 @@ export default function Form() {
             setMissingData(true);
             return;
         }
-        const subject = "New Client Sheet from Beingbody.net";
+        const subject = `New Client Sheet: ${data.name} (${data.pronouns}) `;
         const message = buildMessage(subject, data);
         const response = await submitForm(subject, message);
         setResult(response);

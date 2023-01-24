@@ -1,15 +1,18 @@
 const express = require("express");
 const path = require("path");
-const { sendMessage } = require("./sendMessage");
+const sendMessage = require("./sendMessage");
+const createPdf = require("./createPdf");
 const app = express();
 const cert = require("./config.json").CERTIFICATION;
 
 app.use(express.static(path.join(__dirname, "../", "public")));
 app.use(express.json());
 
-app.post("/api/sendMessage", (req, res) => {
+app.post("/api/sendMessage", async (req, res) => {
     if (req.headers.authorization == cert) {
         const { subject, message } = req.body;
+        const pdf = await createPdf(subject, message);
+        console.log("create result:", pdf);
 
         sendMessage(subject, message)
             .then(({ e, info, result }) => {

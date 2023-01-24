@@ -17,12 +17,20 @@ const transporter = nodemailer.createTransport({
 });
 
 const sendMessage = (subject, message) => {
+    const title = subject.replace("New Client Sheet: ", "");
     return new Promise((resolve, reject) => {
         const options = {
             from: EMAIL_FROM,
             to: EMAIL_TO,
             subject,
             html: message,
+            attachments: [
+                {
+                    filename: `${title}.pdf`,
+                    path: `server/files/${title}.pdf`,
+                    contentType: "application/pdf",
+                },
+            ],
         };
 
         transporter.sendMail(options, function (e, info) {
@@ -43,6 +51,4 @@ const sendMessage = (subject, message) => {
     });
 };
 
-module.exports = {
-    sendMessage,
-};
+module.exports = sendMessage;
