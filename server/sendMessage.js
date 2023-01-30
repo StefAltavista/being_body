@@ -18,19 +18,24 @@ const transporter = nodemailer.createTransport({
 
 const sendMessage = (subject, message) => {
     const title = subject.replace("New Client Sheet: ", "");
+
+    subject != "New Booking Request from Beingbody.net"
+        ? (attachments = [
+              {
+                  filename: `${title}.pdf`,
+                  path: `server/files/${title}.pdf`,
+                  contentType: "application/pdf",
+              },
+          ])
+        : (attachments = null);
+
     return new Promise((resolve, reject) => {
         const options = {
             from: EMAIL_FROM,
             to: EMAIL_TO,
             subject,
             html: message,
-            attachments: [
-                {
-                    filename: `${title}.pdf`,
-                    path: `server/files/${title}.pdf`,
-                    contentType: "application/pdf",
-                },
-            ],
+            attachments,
         };
 
         transporter.sendMail(options, function (e, info) {

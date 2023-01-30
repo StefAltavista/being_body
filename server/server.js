@@ -11,8 +11,10 @@ app.use(express.json());
 app.post("/api/sendMessage", async (req, res) => {
     if (req.headers.authorization == cert) {
         const { subject, message } = req.body;
-        const pdf = await createPdf(subject, message);
-        console.log("create result:", pdf);
+
+        subject != "New Booking Request from Beingbody.net"
+            ? await createPdf(subject, message)
+            : null;
 
         sendMessage(subject, message)
             .then(({ e, info, result }) => {

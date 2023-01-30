@@ -6,6 +6,7 @@
 }
 body {
     display: flex;
+    margin: 0;
 }
 h1 {
     font-size: 40px;
@@ -20,6 +21,9 @@ h3,
 p {
     transition: 700ms;
 }
+a {
+    text-decoration: none;
+}
 
 h1:hover,
 h3:hover,
@@ -27,13 +31,6 @@ p:hover {
     letter-spacing: 0.2px;
 }
 
-#background {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    overflow: scroll;
-    z-index: -1;
-}
 #header {
     background-color: white;
     position: fixed;
@@ -44,6 +41,7 @@ p:hover {
     flex-direction: column;
     align-items: center;
     border-bottom: 1px solid black;
+    z-index: 2;
 }
 
 #titles {
@@ -65,7 +63,7 @@ p {
 }
 
 #homeBody {
-    top: 125px;
+    margin-top: 25px;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -77,7 +75,7 @@ p {
 }
 
 #homeBody img {
-    width: 80vw;
+    width: 50vw;
 }
 #homeBody p {
     align-self: center;
@@ -99,6 +97,8 @@ p {
     transition: 500ms;
     cursor: pointer;
     margin-left: 15px;
+    color: rgb(18, 40, 39);
+    font-size: 22px;
 }
 
 #menuArea p:hover {
@@ -107,18 +107,21 @@ p {
 }
 
 #menu {
-    width: auto;
+    /* width: auto; */
+    min-height: 40px;
     position: relative;
     display: flex;
     flex-direction: row;
-    transition: 500ms;
+    justify-content: space-between;
+    transition: 1000ms;
     overflow: hidden;
     background-color: white;
+    white-space: nowrap;
 }
 
 .section {
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,27 +131,81 @@ p {
 .section h3 {
     text-align: center;
 }
-#sectionBody {
+.sectionBody {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    width: auto;
 }
 
-#sectionBody img {
+.sectionBody img {
     margin: 50px;
     width: 500px;
-    max-height: 60vh;
-    object-fit: contain;
+    /* max-height: 60vh; */
+    /* object-fit: contain; */
+}
+#massageBody {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 10%;
+    width: auto;
+}
+#massageBody img {
+    /* position: absolute; */
+    margin: 0px;
+    width: 40vw;
 }
 
-#prices img {
-    width: 170px;
+#about {
+    padding-right: 10%;
 }
 
 #bookLink {
-    margin-top: 50px;
-    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 120px;
+    background-color: rgb(97, 255, 165);
+    transition: 1000ms;
+}
+
+#bookLink:hover {
+    height: 200px;
+    width: 170px;
+}
+
+#bookLink a p {
+    font-size: 40px;
     font-weight: 700;
+}
+
+#overflowBody {
+    display: flex;
+    flex-direction: row;
+}
+#overflowBody div {
+    position: absolute;
+}
+#overflowBody div p,
+a {
+    padding-left: 10px;
+    font-size: 30px;
+}
+#overflowBody img {
+    position: relative;
+    width: 40vw;
+}
+
+#rates p {
+    color: black;
+}
+
+#links p {
+    color: aliceblue;
 }
 
 #footer {
@@ -169,6 +226,7 @@ a {
 /* FORM */
 #formPage {
     display: flex;
+    margin-top: 125px;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -264,38 +322,101 @@ button:hover {
 #input button {
     margin-left: 50px;
 }
-@media only screen and (max-width: 1100px) {
-    #menu {
-        flex-direction: column;
-        max-width: 165px;
-        white-space: nowrap;
+
+#loadingBackground {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.285);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loadingSpinner {
+    width: 80px;
+    height: 80px;
+    border: 5px solid orange;
+    border-right: none;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation-name: rotate;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
     }
-    #menu p {
-        margin-top: 5px;
+
+    to {
+        transform: rotate(90deg);
     }
-    #menuArea {
-        flex-direction: column;
+    to {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(270deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
 
-@media only screen and (max-width: 800px) {
-    #sectionBody img {
-        margin: 50px;
-        width: 300px;
+@media only screen and (max-width: 900px) {
+    #homeBody img {
+        margin-top: 120px;
+
+        width: 80vw;
+    }
+
+    .sectionBody img {
+        width: 400px;
         object-fit: contain;
     }
 
-    #sectionBody {
+    .sectionBody {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding: 0;
+        margin: 0;
     }
+    #massageBody {
+        flex-direction: column;
+    }
+    #massageBody img {
+        width: 50vw;
+        margin-bottom: 50px;
+    }
+    #about {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    #rates {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    #contacts div img {
+        width: 80vw;
+    }
+
+    #links {
+        margin-right: 40px;
+    }
+
     #titles p {
         font-size: 15px;
     }
 
     #menuArea {
-        margin-top: 10px;
+        margin-top: 7px;
         position: static;
         display: flex;
         flex-direction: column;
@@ -305,10 +426,11 @@ button:hover {
     }
 
     #menuArea #label {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 
     #menuArea p {
+        padding-top: 5px;
         font-size: 15px;
         white-space: normal;
     }

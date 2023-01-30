@@ -29,7 +29,7 @@ export default function Book() {
 
     return (
         <div id="book">
-            <Header></Header>
+            <Header home={false}></Header>
             <div id="side">
                 <h3>Book an appointment</h3>
                 {!result && (

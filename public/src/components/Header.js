@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Menu from "./Menu";
+import { Link } from "react-router-dom";
 
-export default function Header() {
+export default function Header({ home }) {
     const [toggleMenu, setToggleMenu] = useState("0px");
 
     return (
@@ -13,15 +14,29 @@ export default function Header() {
             </div>
 
             <div id="menuArea">
-                <p
-                    id="label"
-                    onClick={() =>
-                        setToggleMenu(toggleMenu == "0px" ? "350px" : "0px")
-                    }
-                >
-                    MENU
-                </p>
-                <Menu toggleMenu={toggleMenu} toggle={setToggleMenu}></Menu>
+                {home ? (
+                    <>
+                        {" "}
+                        <p
+                            id="label"
+                            onClick={() =>
+                                setToggleMenu(
+                                    toggleMenu == "0vw" ? "90vw" : "0vw"
+                                )
+                            }
+                        >
+                            MENU
+                        </p>
+                        <Menu
+                            toggleMenu={toggleMenu}
+                            toggle={setToggleMenu}
+                        ></Menu>
+                    </>
+                ) : (
+                    <Link to="/">
+                        <p>← Back</p>
+                    </Link>
+                )}
             </div>
         </div>
     );
