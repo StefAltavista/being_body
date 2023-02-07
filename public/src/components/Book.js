@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
 import Header from "./Header";
 import InputField from "./InputField";
 import buildMessage from "../api/buildMessage";
@@ -33,11 +32,23 @@ export default function Book() {
             <div id="side">
                 <h3>Book an appointment</h3>
                 {!result && (
-                    <p>Feel Free to contact me to discuss availability!</p>
+                    <>
+                        {" "}
+                        <p>Feel Free to contact me to discuss availability!</p>
+                        <p id="privacy">
+                            *<br></br> All informations are held in strictest
+                            confidence. At no given point is information
+                            disclosed or shared without client`s consent. You
+                            may choose to skip answering any question you feel
+                            impinges on personal information you do not wish to
+                            disclose.
+                        </p>
+                    </>
                 )}
             </div>
             {!result ? (
                 <div id="input">
+                    <button onClick={send}>SEND</button>
                     <div id="personalInfo">
                         <div>
                             <p>Name:</p>
@@ -80,14 +91,6 @@ export default function Book() {
                             setData={setData}
                         />
                     </div>
-                    <button onClick={send}>SEND</button>
-                    <p id="privacy">
-                        * All information is held in strictest confidence. At no
-                        given point is information disclosed or shared without
-                        client`s consent. You may choose to skip answering any
-                        question you feel impinges on personal information you
-                        do not wish to disclose.
-                    </p>
                 </div>
             ) : (
                 <>

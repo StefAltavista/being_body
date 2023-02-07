@@ -21,37 +21,45 @@ export default function Home() {
             <div id="Concept" className="section">
                 <h3>Concept</h3>
                 <div className="sectionBody">
-                    <p>
-                        {" "}
-                        I see the body as a vessel to express and a tool to
-                        connect, creating pathways for healing, well being and
-                        spiritual growth. My goal is to generate a healing
-                        experience through the harmonisation of body, mind and
-                        spirit. To create a safe space to connect with, explore
-                        and listen to the self through guided corporal
-                        awareness:<br></br>
-                        <br></br> <br></br>
-                        <div style={{ textAlign: "center" }}>
+                    <div>
+                        <p>
+                            I see the body as a vessel to express and a tool to
+                            connect, creating pathways for healing, well being
+                            and spiritual growth. My goal is to generate a
+                            healing experience through the harmonisation of
+                            body, mind and spirit. To create a safe space to
+                            connect with, explore and listen to the self through
+                            guided corporal awareness:
+                        </p>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <div
+                            style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "center",
+                            }}
+                        >
+                            <p>Through massage</p>
+                            <p>Through bodywork </p>
+                            <p>Through movement</p>
+                            <br></br>
+                            <br></br>
+                            <br></br>
                             <p>
-                                Through massage
-                                <br></br>Through bodywork <br></br>Through
-                                movement
-                                <br></br>
-                                <br></br>
-                                <br></br>
-                                <br></br>When you truly listen, the body will
-                                speak. All bodies welcome, valid and celebrated.{" "}
-                                <br></br>
-                                <br></br>
-                                <br></br>
-                                <br></br>
-                                <p style={{ fontSize: "14px" }}>
-                                    *In studio & on call
-                                    <br></br>*No erotic massage
-                                </p>
+                                When you truly listen, the body will speak. All
+                                bodies welcome, valid and celebrated.{" "}
+                            </p>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <p style={{ fontSize: "14px" }}>
+                                *In studio & on call <br></br>*No erotic massage{" "}
                             </p>
                         </div>
-                    </p>{" "}
+                    </div>
                     <img src={"../../img/concept.png"} />
                 </div>
             </div>
@@ -73,16 +81,16 @@ export default function Home() {
                         applied through natural gravity, and focus on trigger
                         and pressure points to release tension and pain with the
                         help of mindful breath.
-                        <br></br> <br></br>
-                        <br></br>I see this rhythmical symbiosis of movement and
-                        breath to be a dance between giver and receiver. I use a
-                        mix of
                         <br></br>
-                        <br></br> <br></br>
-                        techniques, guided by what the body tells me. My
-                        intention is to create a space to listen. Bring people
-                        into a place where they can hear themselves, connect
-                        with themselves. When you truly listen, the body speaks.
+                        <br></br>
+                        <br></br>I see this rhythmical symbiosis of movement and
+                        breath to be a dance between giver and receiver.
+                        <br></br>
+                        <br></br>
+                        <br></br> I use a mix of techniques, guided by what the
+                        body tells me. My intention is to create a space to
+                        listen. Bring people into a place where they can hear
+                        themselves, connect with themselves.
                     </p>
                 </div>
             </div>
@@ -104,11 +112,27 @@ export default function Home() {
                             them. The more I allowed myself to feel, the more I
                             discovered feelings within me. I could observe them,
                             express them, and let them go. An act of katharsis.
-                            <br></br> This is where I feel{" "}
-                            <strong>healing</strong> lies, in interal focus,
-                            that allows one to feel, aknowledge, and realse. We
-                            store so many things within our{" "}
-                            <strong>body</strong>, and these things, when
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                        </p>
+                        <p
+                            style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "center",
+                            }}
+                        >
+                            This is where I feel <strong>healing</strong> lies,
+                            in interal focus that allows one to feel,
+                            aknowledge, and release.
+                        </p>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <p>
+                            We store so many things within our
+                            <strong> body</strong>, and these things, when
                             ignored, acccumlate into tension and pain, which
                             takes their place. I wanted to discover how to
                             confront and heal this pain within myself, and share
@@ -119,15 +143,15 @@ export default function Home() {
                             touch. <br></br>
                             <br></br>
                             <br></br> My experience with{" "}
-                            <strong>Traditional Thai Massage</strong>
+                            <strong>Traditional Thai Massage </strong>
                             furthered my knowledge of body mechanics and taught
                             me to map the body through lines of energy using
-                            metta, loveing kindness, in forms of deep static,
-                            and rythmic pressure.
+                            metta, loveing kindness, in forms of deep static and
+                            rythmic pressure.
                             <br></br> My experience with{" "}
                             <strong>LOMILOMI</strong> taught me to work with the
                             body in long flowing motions, incorperating mulitple
-                            parts of the body, instead of insolating them,
+                            parts of the body instead of insolating them,
                             instigating a peace and stablitiy that can only be
                             found in the mind when a specific focus cannot be
                             made, but instead a full feeling. <br></br> My
@@ -139,15 +163,17 @@ export default function Home() {
                             <strong>alternative medicine</strong> and natural
                             healing has led me to research{" "}
                             <strong>aromas </strong>
-                            for their therapeutic benefit, and explore their
-                            impact on the emotional centers of the brain, and
-                            has laid the path for further exploration in sense
-                            and sound. <br></br> But what all of my experience
-                            as a student and as a practicer has taught me, is
-                            that it takes loving hands, combined with deep
-                            reflection, and open hearts, to improve health and
-                            wellbeing. And this is what I will continue to
-                            strive for and continue to explore."
+                            for their therapeutic benefit and explore their
+                            impact on the emotional centers of the brain, laying
+                            the path for further exploration in sense and sound.{" "}
+                            <br></br> But what all of my experience as a student
+                            and as a practicer has taught me is that it takes
+                            loving hands, combined with deep reflection and open
+                            hearts to improve health and wellbeing. <br></br>
+                            <strong>
+                                This is what I will continue to strive for and
+                                continue to explore.
+                            </strong>
                         </p>
                     </div>
                 </div>
@@ -199,7 +225,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <Footer></Footer>
         </div>
     );
 }

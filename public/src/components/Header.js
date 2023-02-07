@@ -3,7 +3,7 @@ import Menu from "./Menu";
 import { Link } from "react-router-dom";
 
 export default function Header({ home }) {
-    const [toggleMenu, setToggleMenu] = useState("0px");
+    const [toggleMenu, setToggleMenu] = useState("closeMenu");
 
     return (
         <div id="header">
@@ -21,7 +21,9 @@ export default function Header({ home }) {
                             id="label"
                             onClick={() =>
                                 setToggleMenu(
-                                    toggleMenu == "0vw" ? "90vw" : "0vw"
+                                    toggleMenu == "closeMenu"
+                                        ? "openMenu"
+                                        : "closeMenu"
                                 )
                             }
                         >

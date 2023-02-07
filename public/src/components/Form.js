@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import buildMessage from "../api/buildMessage";
 import submitForm from "../api/submitForm";
 import Header from "./Header";
-import Footer from "./Footer";
 import Loading from "./Loading";
 
 export default function Form() {
@@ -63,7 +62,16 @@ export default function Form() {
             <Header home={false}></Header>
             <div style={{ display: "flex", flexDirection: "column" }}>
                 <div id="formPage">
-                    <h3>Wellness Questions</h3>
+                    <div id="side">
+                        <h3>Wellness Questions</h3>
+                        <p id="privacy">
+                            * All information is held in strictest confidence.
+                            At no given point is information disclosed or shared
+                            without client`s consent. You may choose to skip
+                            answering any question you feel impinges on personal
+                            information you do not wish to disclose.
+                        </p>
+                    </div>
                     {missingData && <p>Please enter your name!</p>}
                     {!result ? (
                         <>
@@ -123,15 +131,7 @@ export default function Form() {
                                     </p>
                                     {inputField("extraInfo")}
                                 </div>
-                                <button onClick={send}>Send Information</button>
-                                <p id="privacy">
-                                    * All information is held in strictest
-                                    confidence. At no given point is information
-                                    disclosed or shared without client`s
-                                    consent. You may choose to skip answering
-                                    any question you feel impinges on personal
-                                    information you do not wish to disclose.
-                                </p>
+                                <button onClick={send}>Send</button>
                             </div>
                         </>
                     ) : (
@@ -139,8 +139,6 @@ export default function Form() {
                     )}{" "}
                 </div>
                 {load && <Loading></Loading>}
-
-                <Footer></Footer>
             </div>
         </>
     );
