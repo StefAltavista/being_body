@@ -40,7 +40,7 @@ h1:hover,
 h3:hover,
 p:hover {
     letter-spacing: 0.1px;
-    color: rgb(82, 1, 1);
+    color: rgb(66, 2, 2);
 }
 
 #header {
@@ -74,8 +74,8 @@ p {
     padding: 0;
 }
 
-#homeBody {
-    margin-top: 25px;
+#welcome {
+    margin-top: 50px;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -86,10 +86,10 @@ p {
     border-bottom: 1px solid black;
 }
 
-#homeBody img {
-    width: 50vw;
+#welcome img {
+    width: 40vw;
 }
-#homeBody p {
+#welcome p {
     align-self: center;
     font-size: 25px;
     color: rgb(0, 0, 0);
@@ -168,7 +168,7 @@ p {
     /* max-height: 60vh; */
     /* object-fit: contain; */
 }
-#massageBody {
+#massageTherapy {
     margin-top: 50px;
     display: flex;
     flex-direction: row;
@@ -176,7 +176,7 @@ p {
     padding-right: 10%;
     width: auto;
 }
-#massageBody img {
+#massageTherapy img {
     /* position: absolute; */
     margin: 0px;
     width: 40vw;
@@ -186,6 +186,9 @@ p {
     padding-right: 10%;
 }
 
+#katiaserena div img {
+    max-height: 70vh;
+}
 #bookLink {
     display: flex;
     justify-content: center;
@@ -369,7 +372,13 @@ button:hover {
     animation-duration: 1500ms;
     animation-iteration-count: infinite;
 }
-
+#aroma {
+    display: flex;
+    flex-direction: row;
+}
+#aroma img {
+    width: 50%;
+}
 @keyframes rotate {
     from {
         transform: rotate(0deg);
@@ -390,11 +399,11 @@ button:hover {
 }
 
 @media only screen and (max-width: 900px) {
-    #homeBody img {
+    #welcome img {
         margin-top: 120px;
         width: 80vw;
     }
-    #homeBody p {
+    #welcome p {
         font-size: 20px;
     }
 
@@ -413,12 +422,12 @@ button:hover {
         margin: 0;
     }
 
-    #massageBody {
+    #massageTherapy {
         flex-direction: column;
         padding-left: 10px;
         padding-right: 10px;
     }
-    #massageBody img {
+    #massageTherapy img {
         width: 80vw;
         margin-bottom: 50px;
     }
