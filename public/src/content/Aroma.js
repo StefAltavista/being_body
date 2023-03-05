@@ -45,7 +45,7 @@ export default function Aroma() {
                         healing path.
                     </p>
                 </div>
-                <img src="../../img/aroma.png" />{" "}
+                <img src="aroma.png" />{" "}
             </div>
         </div>
     );

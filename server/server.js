@@ -5,7 +5,7 @@ const createPdf = require("./createPdf");
 const app = express();
 const cert = require("./config.json").CERTIFICATION;
 
-app.use(express.static(path.join(__dirname, "../", "public")));
+app.use(express.static(path.join(__dirname, "../", "img")));
 app.use(express.json());
 
 app.post("/api/sendMessage", async (req, res) => {

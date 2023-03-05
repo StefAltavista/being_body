@@ -5,6 +5,7 @@ import Header from "./Header";
 import Loading from "./Loading";
 
 export default function Form() {
+    window.scrollTo(0, 0);
     const [missingData, setMissingData] = useState(false);
     const [result, setResult] = useState();
     const [load, setLoad] = useState(false);

@@ -8,7 +8,7 @@ export default function Massage() {
                 dissolve them.
             </p>
             <div id="massageTherapy" className="sectionBody">
-                <img src={"../../img/therapy2.jpg"} />
+                <img src={"therapy2.jpg"} />
                 <p>
                     With knowledge of body mechanics and alignment, I map the
                     body using fluid, rhythmic motion to restore energy

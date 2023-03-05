@@ -7,6 +7,7 @@ import submitForm from "../api/submitForm";
 import Loading from "./Loading";
 
 export default function Book() {
+    window.scrollTo(0, 0);
     const [result, setResult] = useState();
     const [data, setData] = useState({
         name: "",

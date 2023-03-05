@@ -5,15 +5,17 @@ export default function () {
         <div id="prices" className="section">
             <h3>Prices</h3>
             <div id="overflowBody" className="sectionBody">
-                <img src="../../img/prices.png" />
+                <img src="prices.png" />
                 <div id="rates">
-                    <p>60 min → 60€ </p>
+                    <p>30 min → 20€ ~ 30€ </p>
                     <br></br>
-                    <p>90 min → 75€ </p>
+                    <p>60 min → 40€ ~ 60€ </p>
                     <br></br>
-                    <p>120 min → 95€ </p>
+                    <p>90 min → 70€ ~ 90€ </p>
                     <br></br>
-                    <p style={{ fontSize: "25px" }}>
+                    <p>120 min → 100€ ~ 120€ </p>
+                    <br></br>
+                    <p style={{ fontSize: "20px" }}>
                         * Pricing on a sliding scale. Please contact me directly
                         for more information.
                     </p>

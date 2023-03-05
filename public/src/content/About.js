@@ -5,7 +5,7 @@ export default function About() {
         <div id="katiaserena" className="section">
             <h3>Katia Serena</h3>
             <div className="sectionBody">
-                <img src={"../../img/about.jpeg "} />
+                <img src={"about.jpeg "} />
 
                 <div id="about">
                     <p>
@@ -33,8 +33,6 @@ export default function About() {
                         {" "}
                         <p>
                             This is where I feel <strong>healing</strong> lies,
-                        </p>
-                        <p>
                             in interal focus that allows one to feel,
                             aknowledge, and release.
                         </p>

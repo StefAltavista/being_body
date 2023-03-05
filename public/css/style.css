@@ -103,6 +103,7 @@ p {
     left: 20px;
     top: 10px;
     cursor: pointer;
+    max-width: 100vw;
 }
 
 #menuArea p {
@@ -230,7 +231,7 @@ a {
     color: black;
 }
 
-#links p {
+.contactP {
     color: aliceblue;
 }
 
@@ -347,7 +348,7 @@ button:hover {
 }
 
 #loadingBackground {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100vw;
     height: 100vh;
@@ -377,7 +378,7 @@ button:hover {
     flex-direction: row;
 }
 #aroma img {
-    width: 50%;
+    width: 40%;
 }
 @keyframes rotate {
     from {
@@ -400,7 +401,6 @@ button:hover {
 
 @media only screen and (max-width: 900px) {
     #welcome img {
-        margin-top: 120px;
         width: 80vw;
     }
     #welcome p {
@@ -450,6 +450,15 @@ button:hover {
 
     #links {
         margin-right: 40px;
+    }
+
+    /* contact font size */
+    #overflowBody div p {
+        font-size: 20px;
+    }
+
+    .contactP {
+        margin-top: -20px;
     }
 
     #titles p {
@@ -521,5 +530,13 @@ button:hover {
     #input {
         width: 90%;
         padding-left: 20px;
+    }
+
+    #aroma {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #aroma img {
+        width: 80%;
     }
 }

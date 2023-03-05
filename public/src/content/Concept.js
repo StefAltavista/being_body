@@ -44,7 +44,7 @@ export default function Concept() {
                         </p>
                     </div>
                 </div>
-                <img src={"../../img/concept.png"} />
+                <img src={"concept.png"} />
             </div>
         </div>
     );
