@@ -1,5 +1,5 @@
 import React from "react";
-export default function Massage() {
+export default function Massage({ extension }) {
     return (
         <div id="massage" className="section">
             <h3>Massage Therapy</h3>
@@ -8,7 +8,7 @@ export default function Massage() {
                 dissolve them.
             </p>
             <div id="massageTherapy" className="sectionBody">
-                <img src={"therapy2.jpg"} />
+                <img src={`img/therapy2.${extension}`} />
                 <p>
                     With knowledge of body mechanics and alignment, I map the
                     body using fluid, rhythmic motion to restore energy

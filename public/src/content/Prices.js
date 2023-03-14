@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-export default function () {
+export default function ({ extension }) {
     return (
         <div id="prices" className="section">
             <h3>Prices</h3>
             <div id="overflowBody" className="sectionBody">
-                <img src="prices.png" />
+                <img src={`img/prices.${extension}`} />
                 <div id="rates">
                     <p>30 min → 20€ ~ 30€ </p>
                     <br></br>

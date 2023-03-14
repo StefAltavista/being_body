@@ -23,7 +23,7 @@ const sendMessage = (subject, message) => {
         ? (attachments = [
               {
                   filename: `${title}.pdf`,
-                  path: `server/files/${title}.pdf`,
+                  path: `./files/${title}.pdf`,
                   contentType: "application/pdf",
               },
           ])

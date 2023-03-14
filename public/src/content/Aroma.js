@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Aroma() {
+export default function Aroma({ extension }) {
     return (
         <div id="aromatherapy" className="section">
             <h3>Aromatherapy</h3>
@@ -45,7 +45,7 @@ export default function Aroma() {
                         healing path.
                     </p>
                 </div>
-                <img src="aroma.png" />{" "}
+                <img src={`img/aroma.${extension}`} />{" "}
             </div>
         </div>
     );

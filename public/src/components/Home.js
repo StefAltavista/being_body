@@ -10,17 +10,17 @@ import Prices from "../content/Prices";
 import About from "../content/About";
 import Contacts from "../content/Contacts";
 
-export default function Home() {
+export default function Home({ extension }) {
     return (
         <div id="home">
-            <Header home={true}></Header>
-            <Welcome />
-            <Concept />
-            <Massage />
-            <Aroma />
-            <Prices />
-            <About />
-            <Contacts />
+            <Header home={true} extension={extension}></Header>
+            <Welcome extension={extension} />
+            <Concept extension={extension} />
+            <Massage extension={extension} />
+            <Aroma extension={extension} />
+            <Prices extension={extension} />
+            <About extension={extension} />
+            <Contacts extension={extension} />
         </div>
     );
 }

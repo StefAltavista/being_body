@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Concept() {
+export default function Concept({ extension }) {
     return (
         <div id="Concept" className="section">
             <h3>Concept</h3>
@@ -44,7 +44,7 @@ export default function Concept() {
                         </p>
                     </div>
                 </div>
-                <img src={"concept.png"} />
+                <img src={`img/concept.${extension}`} />
             </div>
         </div>
     );

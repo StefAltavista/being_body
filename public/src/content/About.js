@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function About() {
+export default function About({ extension }) {
     return (
         <div id="katiaserena" className="section">
             <h3>Katia Serena</h3>
             <div className="sectionBody">
-                <img src={"about.jpeg "} />
+                <img src={`img/about.${extension}`} />
 
                 <div id="about">
                     <p>

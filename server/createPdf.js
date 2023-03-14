@@ -8,7 +8,7 @@ const createPdf = (subject, message) => {
     return new Promise((resolve, reject) => {
         pdf.generatePdf(file, options)
             .then((pdfBuffer) => {
-                fs.writeFile(`./server/files/${title}.pdf`, pdfBuffer, (e) => {
+                fs.writeFile(`./files/${title}.pdf`, pdfBuffer, (e) => {
                     e ? reject(e) : resolve("ok");
                 });
             })

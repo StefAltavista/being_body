@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Contacts() {
+export default function Contacts({ extension }) {
     return (
         <div id="contacts" className="section">
             <h3>Contacts</h3>
             <div id="overflowBody" className="sectionBody">
-                <img src={"contact.png "} />
+                <img src={`img/contact.${extension}`} />
                 <div id="links">
                     <a href="mailto:being.body.practice@gmail.com">
                         <p className="contactP">
