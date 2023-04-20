@@ -13,12 +13,12 @@ export default function About({ extension }) {
                         <br></br> The body has always intrigued me. I have been
                         a mover since a young age, and years of focus on my
                         anatomy as a tool created a{" "}
-                        <strong>corperal focus </strong>within me. The more I
+                        <strong>corporal focus </strong>within me. The more I
                         moved, the more I discovered about myself, about the
                         world around me, about the connection between them. The
                         more I allowed myself to feel, the more I discovered
                         feelings within me. I could observe them, express them,
-                        and let them go. An act of katharsis.{" "}
+                        and let them go. An act of catharsis.
                     </p>
                     <br></br>
                     <br></br>
@@ -33,8 +33,8 @@ export default function About({ extension }) {
                         {" "}
                         <p>
                             This is where I feel <strong>healing</strong> lies,
-                            in interal focus that allows one to feel,
-                            aknowledge, and release.
+                            in internal focus that allows one to feel,
+                            acknowledge and release.
                         </p>
                     </div>
                     <br></br>
@@ -43,13 +43,13 @@ export default function About({ extension }) {
                     <p>
                         We store so many things within our
                         <strong> body</strong>, and these things, when ignored,
-                        acccumlate into tension and pain, which takes their
+                        acccumulate into tension and pain, which takes their
                         place. I wanted to discover how to confront and heal
                         this pain within myself, and share this with those
                         around me. <br></br> And so my study of movement
-                        delvolped into my study of the body and its functions
+                        developed into my study of the body and its functions
                         and systems, which delvoped into my study of how to
-                        redirect and minipulate them through touch. <br></br>
+                        redirect and manipulate them through touch. <br></br>
                         <br></br>
                         <br></br> I believe it takes focused feeling, deep
                         reflection, and open hearts to improve health and

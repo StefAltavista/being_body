@@ -68,7 +68,7 @@ export default function Form() {
                         <p id="privacy">
                             * All information is held in strictest confidence.
                             At no given point is information disclosed or shared
-                            without client`s consent. You may choose to skip
+                            without clients consent. You may choose to skip
                             answering any question you feel impinges on personal
                             information you do not wish to disclose.
                         </p>
@@ -126,8 +126,8 @@ export default function Form() {
 
                                 <div id="personal" className="formSection">
                                     <p>
-                                        Is there any extra infromation,
-                                        strougle, distresses or strains you
+                                        Is there any extra information,
+                                        struggle, distresses or strains you
                                         would like to share?
                                     </p>
                                     {inputField("extraInfo")}

@@ -25,17 +25,17 @@ export default function Massage({ extension }) {
                     <br></br>My experience with{" "}
                     <strong>Traditional Thai Massage </strong>
                     furthered my knowledge of body mechanics and taught me to
-                    map the body through lines of energy using metta, loveing
-                    kindness, in forms of deep static and rythmic pressure.
+                    map the body through lines of energy using Metta, loving
+                    kindness, in forms of deep static and rhythmic pressure.
                     <br></br> My experience with <strong>LOMILOMI</strong>{" "}
                     taught me to work with the body in long flowing motions,
-                    incorperating mulitple parts of the body instead of
-                    insolating them, instigating a peace and stablitiy that can
+                    incorporating multiple parts of the body instead of
+                    isolating them, instigating a peace and stability that can
                     only be found in the mind when a specific focus cannot be
                     made, but instead a full feeling. <br></br> My experience
                     with <strong> trigger points </strong> gave me the ability
                     to find painful and tense areas in the muscles and fascia
-                    and release them, assiting in achieving long term results.{" "}
+                    and release them, assisting in achieving long term results.
                     <br></br>
                     <br></br> I use a mix of techniques, guided by what the body
                     tells me. My intention is to create a space to listen. Bring

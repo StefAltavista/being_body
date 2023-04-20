@@ -370,7 +370,7 @@ button:hover {
     align-items: center;
 
     animation-name: rotate;
-    animation-duration: 1500ms;
+    animation-duration: 500ms;
     animation-iteration-count: infinite;
 }
 #aroma {
